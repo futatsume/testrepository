@@ -20,7 +20,8 @@ jobs:
           source ./venv/bin/activate
 
           pip install pytest
+          pytest -h
 
-          pytest --jnuitxml=test-results/pytest.xml test_calculations.py
+          pytest --jnuit-xml=test-results/pytest.xml test_calculations.py
       - store_test_results:
           path: test-results
