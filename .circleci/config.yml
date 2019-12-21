@@ -21,6 +21,6 @@ jobs:
 
           pip install pytest
 
-          pytest test_calculations.py --jnuit-xml=test-results/pytest.xml
+          pytest test_calculations.py --jnuitxml=test-results/pytest.xml
       - store_test_results:
           path: test-results
