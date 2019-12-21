@@ -15,4 +15,12 @@ jobs:
           name: Print the Current Time
           command: date
         
-      - run: python test_calculations.py
+      - run: |
+          python3.8 -m venv venv
+          source ./venv/bin/activate
+
+          pip install pytest
+
+          pytest test_calculations.py --jnuit-xml=test_results/pytest.xml
+      - store_test_results:
+          path: test-results
